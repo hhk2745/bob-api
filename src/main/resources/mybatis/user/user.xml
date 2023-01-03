@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.bobapi.user.mapper.UserRepository">
+  <resultMap id="SignupResultVo" type="com.example.bobapi.user.vo.SignupResultVo">
+    <result column="s_return" property="result" />
+    <result column="s_userNo" property="userNo" />
+  </resultMap>
+
+  <select id="pUserInfoIns" parameterType="com.example.bobapi.user.vo.SignupRequestVo" resultMap="SignupResultVo">
+    CALL db_bob.p_user_info_ins(#{email}, #{password}, #{userNick})
+  </select>
+</mapper>
