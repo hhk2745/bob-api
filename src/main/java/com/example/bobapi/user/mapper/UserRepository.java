@@ -8,4 +8,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserRepository {
 
     SignupResultVo pUserInfoIns(SignupRequestVo signupRequestVo);
+
 }
