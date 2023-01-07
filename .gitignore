@@ -1,4 +1,5 @@
 application-real-db.properties
+application-real-jwt.properties
 
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,java,gradle
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,java,gradle

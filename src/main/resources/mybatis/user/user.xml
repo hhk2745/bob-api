@@ -7,10 +7,6 @@
     <result column="s_userNo" property="userNo" />
   </resultMap>
 
-  <select id="pUserInfoIns" parameterType="com.example.bobapi.user.vo.SignupRequestVo" resultMap="SignupResultVo">
-    CALL db_bob.p_user_info_ins(#{email}, #{password}, #{userNick})
-  </select>
-
   <select id="findByUserEmail" resultMap="LoginResultVo">
     select user_no,user_id,user_pw,user_nick FROM db_bob.user_info WHERE user_id = #{param1}
   </select>
